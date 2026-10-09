@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b35">
+  <title>Inscription | Fan Club Aigle Royal Music</title>
+  <style>
+    :root { --navy:#101b35; --gold:#f2c75c; --ink:#172033; --muted:#667085; --line:#dce2eb; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); background:#f3f5f9; }
+    .hero { background:linear-gradient(135deg,#101b35,#263e66); color:white; padding:38px 18px 34px; text-align:center; border-bottom:5px solid var(--gold); }
+    .eagle { width:76px; height:76px; display:grid; place-items:center; margin:0 auto 12px; border:2px solid var(--gold); border-radius:50%; color:var(--gold); font-size:39px; }
+    .hero h1 { margin:0; font-size:clamp(25px,5vw,38px); letter-spacing:1px; }
+    .hero p { margin:12px 0 0; color:#e4eaf5; }
+    main { max-width:760px; margin:26px auto; padding:0 14px 28px; }
+    .card { background:white; border:1px solid #e5e9f0; border-radius:18px; padding:clamp(18px,4vw,30px); box-shadow:0 8px 28px #13264a0d; }
+    h2 { margin:0 0 8px; font-size:24px; }
+    .intro { margin:0 0 23px; color:var(--muted); line-height:1.5; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .field { display:flex; flex-direction:column; gap:7px; }
+    .full { grid-column:1 / -1; }
+    label { font-weight:700; font-size:14px; }
+    input, select, textarea { width:100%; padding:12px 13px; border:1px solid var(--line); border-radius:9px; background:white; color:var(--ink); font:inherit; }
+    input:focus, select:focus, textarea:focus { outline:2px solid #b9c9ed; border-color:#5979b8; }
+    textarea { resize:vertical; min-height:100px; }
+    .check { display:flex; align-items:flex-start; gap:10px; font-weight:400; line-height:1.45; }
+    .check input { width:auto; margin-top:3px; }
+    .submit, .whatsapp { display:flex; justify-content:center; align-items:center; width:100%; padding:14px 16px; border:0; border-radius:10px; font-size:16px; font-weight:700; text-decoration:none; cursor:pointer; }
+    .submit { background:var(--navy); color:white; margin-top:18px; }
+    .submit:hover { background:#1d3155; }
+    .whatsapp { background:#25d366; color:#082c17; margin-top:12px; }
+    .note { color:var(--muted); font-size:12px; line-height:1.5; margin:15px 0 0; }
+    footer { text-align:center; padding:0 15px 25px; color:var(--muted); font-size:13px; }
+    @media(max-width:560px) { .grid { grid-template-columns:1fr; } .full { grid-column:auto; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="eagle" aria-hidden="true">♛</div>
+    <h1>FAN CLUB AIGLE ROYAL MUSIC</h1>
+    <p>Unis par la musique, fidèles à l'artiste.</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Formulaire d'inscription</h2>
+      <p class="intro">Bienvenue au Fan Club Aigle Royal Music ! Remplissez les informations ci-dessous pour soumettre votre demande d'adhésion, où que vous soyez dans le monde.</p>
+
+      <form action="https://formsubmit.co/secretariataigleroyalmusic@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle inscription — Fan Club Aigle Royal Music">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Merci pour votre demande d'inscription au Fan Club Aigle Royal Music. Le secrétariat vous contactera si nécessaire.">
+        <div class="grid">
+          <div class="field">
+            <label for="nom">Nom complet *</label>
+            <input id="nom" name="Nom complet" autocomplete="name" required placeholder="Votre nom et prénom">
+          </div>
+          <div class="field">
+            <label for="sexe">Sexe (facultatif)</label>
+            <select id="sexe" name="Sexe">
+              <option value="">Choisir (facultatif)</option>
+              <option>Féminin</option><option>Masculin</option><option>Préfère ne pas répondre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="age">Âge *</label>
+            <input id="age" name="Âge" type="number" min="13" max="120" required placeholder="Votre âge">
+          </div>
+          <div class="field">
+            <label for="pays">Pays de résidence *</label>
+            <input id="pays" name="Pays de résidence" autocomplete="country-name" required placeholder="Ex. : République démocratique du Congo">
+          </div>
+          <div class="field">
+            <label for="ville">Ville *</label>
+            <input id="ville" name="Ville" required placeholder="Votre ville">
+          </div>
+          <div class="field">
+            <label for="whatsapp">Numéro WhatsApp *</label>
+            <input id="whatsapp" name="Numéro WhatsApp" type="tel" autocomplete="tel" required placeholder="Ex. : +243 99 000 0000">
+          </div>
+          <div class="field full">
+            <label for="email">Adresse e-mail *</label>
+            <input id="email" name="Adresse e-mail" type="email" autocomplete="email" required placeholder="vous@exemple.com">
+          </div>
+          <div class="field full">
+            <label for="motivation">Pourquoi souhaitez-vous rejoindre le Fan Club ?</label>
+            <textarea id="motivation" name="Motivation" placeholder="Présentez-vous en quelques mots (facultatif)."></textarea>
+          </div>
+          <div class="field full">
+            <label class="check"><input type="checkbox" name="Consentement" value="J'accepte que mes informations soient utilisées pour traiter mon inscription." required> <span>J'accepte que mes informations soient utilisées par le secrétariat pour traiter ma demande d'inscription. *</span></label>
+          </div>
+        </div>
+        <button class="submit" type="submit">Envoyer mon inscription</button>
+        <p class="note">Les champs marqués d'un astérisque (*) sont obligatoires. En envoyant ce formulaire, vous transmettez vos informations au secrétariat du Fan Club.</p>
+      </form>
+
+      <a class="whatsapp" href="https://wa.me/243993478376?text=Bonjour%2C%20je%20souhaite%20m%27inscrire%20au%20Fan%20Club%20Aigle%20Royal%20Music." target="_blank" rel="noopener noreferrer">Contacter le secrétariat sur WhatsApp</a>
+    </section>
+  </main>
+  <footer>© Fan Club Aigle Royal Music</footer>
+</body>
+</html>
